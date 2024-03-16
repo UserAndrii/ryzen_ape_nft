@@ -1,4 +1,5 @@
 @import-normalize;
 
+@import './styles/fonts.scss';
 @import './styles/utils.scss';
 @import './styles/variables.scss';
