@@ -1,13 +1,33 @@
 {
   "files": {
-    "main.css": "/ryzen_ape_nft/static/css/main.96d25f35.css",
-    "main.js": "/ryzen_ape_nft/static/js/main.bb046f62.js",
+    "main.css": "/ryzen_ape_nft/static/css/main.9000b924.css",
+    "main.js": "/ryzen_ape_nft/static/js/main.6c867ee7.js",
+    "static/media/about_desktop@2x.png": "/ryzen_ape_nft/static/media/about_desktop@2x.14a8308e89c6fd613bf9.png",
+    "static/media/hero_desktop@2x.png": "/ryzen_ape_nft/static/media/hero_desktop@2x.8b66b82224cef936159c.png",
+    "static/media/BiroScriptPlus-Bold.ttf": "/ryzen_ape_nft/static/media/BiroScriptPlus-Bold.d59732f3d22e3d024577.ttf",
+    "static/media/about_tablet@2x.png": "/ryzen_ape_nft/static/media/about_tablet@2x.5ca5a247b02861ac15f3.png",
+    "static/media/hero_tablet@2x.png": "/ryzen_ape_nft/static/media/hero_tablet@2x.a86cd510bf07678b0481.png",
+    "static/media/about_desktop.png": "/ryzen_ape_nft/static/media/about_desktop.e1ce410de8c8daf894ae.png",
+    "static/media/hero_desktop.png": "/ryzen_ape_nft/static/media/hero_desktop.0a5edfc4470a08757ab2.png",
+    "static/media/hero_mobile@2x.png": "/ryzen_ape_nft/static/media/hero_mobile@2x.60fd7bb512bce3154d7b.png",
+    "static/media/about_mobile@2x.png": "/ryzen_ape_nft/static/media/about_mobile@2x.d3e0b1627d55cd576574.png",
+    "static/media/about_tablet.png": "/ryzen_ape_nft/static/media/about_tablet.3d822abf6a285d73be26.png",
+    "static/media/hero_tablet.png": "/ryzen_ape_nft/static/media/hero_tablet.5fae8ab6e75293bd3977.png",
+    "static/media/hero_mobile.png": "/ryzen_ape_nft/static/media/hero_mobile.41dca94cd78845ce3583.png",
+    "static/media/about_mobile.png": "/ryzen_ape_nft/static/media/about_mobile.1d3c463583c7d795f073.png",
+    "static/media/RightGrotesk-CompactBlack.otf": "/ryzen_ape_nft/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
+    "static/media/MessinaSansMono-Regular.ttf": "/ryzen_ape_nft/static/media/MessinaSansMono-Regular.b289391c577f8fd447dd.ttf",
+    "static/media/MessinaSansMono-SemiBold.ttf": "/ryzen_ape_nft/static/media/MessinaSansMono-SemiBold.79c44c973c9e739c9ad4.ttf",
+    "static/media/slick.svg": "/ryzen_ape_nft/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ryzen_ape_nft/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ryzen_ape_nft/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/ryzen_ape_nft/index.html",
-    "main.96d25f35.css.map": "/ryzen_ape_nft/static/css/main.96d25f35.css.map",
-    "main.bb046f62.js.map": "/ryzen_ape_nft/static/js/main.bb046f62.js.map"
+    "static/media/slick.woff": "/ryzen_ape_nft/static/media/slick.295183786cd8a1389865.woff",
+    "main.9000b924.css.map": "/ryzen_ape_nft/static/css/main.9000b924.css.map",
+    "main.6c867ee7.js.map": "/ryzen_ape_nft/static/js/main.6c867ee7.js.map"
   },
   "entrypoints": [
-    "static/css/main.96d25f35.css",
-    "static/js/main.bb046f62.js"
+    "static/css/main.9000b924.css",
+    "static/js/main.6c867ee7.js"
   ]
 }
