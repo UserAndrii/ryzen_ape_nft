@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 import s from './Header.module.scss';
 
-import heroMob from '../../images/nft/hero/hero_mobile.png';
-import heroMob2x from '../../images/nft/hero/hero_mobile@2x.png';
-import heroTab from '../../images/nft/hero/hero_tablet.png';
-import heroTab2x from '../../images/nft/hero/hero_tablet@2x.png';
-import heroDesk from '../../images/nft/hero/hero_desktop.png';
-import heroDesk2x from '../../images/nft/hero/hero_desktop@2x.png';
-
 import Twitter from '../../images/icons/Twitter';
 import Discord from '../../images/icons/Discord';
 import Logomark from '../../images/icons/Logomark';
 
-import BurgerMenu from '../BurgerMenu';
+import Hero from '../Hero';
 import Logo from '../../images/icons/Logo';
+import BurgerMenu from '../BurgerMenu';
 
 const Header: React.FC = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpenMenu(prevState => !prevState);
+    if (!isOpenMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'hidden auto';
+    }
+  };
+
   return (
     <div className={s.container}>
       <header className={s.header}>
@@ -29,7 +33,7 @@ const Header: React.FC = () => {
             type="button"
             aria-label="open the menu"
             className={s.header__menu_btn}
-            onClick={() => setIsOpenMenu(true)}
+            onClick={toggleMenu}
           >
             <span>MENU</span>
           </button>
@@ -68,50 +72,9 @@ const Header: React.FC = () => {
               </a>
             </li>
           </ul>
-
-          <div className={s.header__main}>
-            <p className={s.header__subtitle}>diD yOu seE iT ?</p>
-            <h1 className={s.header__title}>YACHT APES</h1>
-            <p className={s.header__description}>Apes aRe eveRywhere</p>
-
-            <div className={s.header__hero_container}>
-              <picture>
-                <source
-                  type="image/png"
-                  media="(min-width: 1200px)"
-                  srcSet={`${heroDesk} 1x, ${heroDesk2x} 2x`}
-                />
-                <source
-                  type="image/png"
-                  media="(min-width: 768px)"
-                  srcSet={`${heroTab} 1x, ${heroTab2x} 2x`}
-                />
-                <source
-                  type="image/png"
-                  media="(max-width: 767px)"
-                  srcSet={`${heroMob} 1x, ${heroMob2x} 2x`}
-                />
-                <img
-                  src={`${heroMob}`}
-                  alt="Ape"
-                  width={216}
-                  height={284}
-                  className={s.header__hero_image}
-                />
-              </picture>
-
-              <a href="#mint" className={s.header__link_meet}>
-                MEET APES
-              </a>
-            </div>
-
-            <p className={s.header__text}>
-              Yacht Ape is a collection of unique digital apes that you can own
-              in NFT format
-            </p>
-          </div>
         </div>
-        <BurgerMenu isOpen={isOpenMenu} onClick={() => setIsOpenMenu(false)} />
+        <Hero />
+        <BurgerMenu isOpen={isOpenMenu} onClick={toggleMenu} />
       </header>
     </div>
   );

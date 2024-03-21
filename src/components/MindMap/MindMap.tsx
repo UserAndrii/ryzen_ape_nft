@@ -35,7 +35,7 @@ const MindMap: React.FC = () => {
       <ul className={s.map__list_slider}>
         <Slider ref={sliderRef} {...settings}>
           {mindData.map(({ title, text, link }, index) => (
-            <li key={index}>
+            <li key={index} style={{ margin: '0 auto' }}>
               <Map title={title} text={text} link={link} />
             </li>
           ))}

@@ -16,7 +16,7 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
         [s.open]: isOpen,
       })}
     >
-      <div className={s.content}>
+      <div className={cn(s.content)}>
         <div className={s.menu}>
           <a href="./" className={s.logo}>
             <Logo className={s.logo__icon} />

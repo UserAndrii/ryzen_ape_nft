@@ -1,30 +1,48 @@
 @import '/src/styles/variables.scss';
 @import '/src/styles/mixins.scss';
 
+// .container {
+//   position: absolute;
+
+//   top: 0;
+//   left: 100%;
+//   width: 100%;
+//   height: 100vh;
+//   padding: 62px 16px 24px;
+
+//   background-color: $main-background-color;
+//   transition: left $transition;
+//   z-index: 10;
+// }
+
+// .open {
+//   left: 0%;
+// }
+
 .container {
-  position: absolute;
+  position: fixed;
 
   top: 0;
-  left: 100%;
+  left: 0;
   width: 100%;
-
-  height: 100%;
-  padding: 62px 16px 24px;
+  height: 0%;
+  visibility: hidden;
+  overflow: hidden;
 
   background-color: $main-background-color;
-  transition: left $transition;
-}
-
-.open {
-  left: 0%;
+  transition: all $transition;
+  z-index: 10;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  max-width: 388px;
+
   height: 100%;
+  max-width: 420px;
+
   margin: 0 auto;
+  padding: 62px 16px 24px;
 }
 
 .menu {
@@ -155,4 +173,9 @@
 .media_icon {
   fill: $main-text-color;
   transition: fill $transition;
+}
+
+.open {
+  visibility: visible;
+  height: 100%;
 }

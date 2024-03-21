@@ -2,6 +2,10 @@
 @import '/src/styles/mixins.scss';
 
 .map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &:hover .map__content,
   &:focus .map__content {
     background-color: $accent-color;
