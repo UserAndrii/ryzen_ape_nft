@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ryzen_ape_nft/static/css/main.9000b924.css",
-    "main.js": "/ryzen_ape_nft/static/js/main.6c867ee7.js",
+    "main.css": "/ryzen_ape_nft/static/css/main.cf805512.css",
+    "main.js": "/ryzen_ape_nft/static/js/main.beef6da7.js",
     "static/media/about_desktop@2x.png": "/ryzen_ape_nft/static/media/about_desktop@2x.14a8308e89c6fd613bf9.png",
     "static/media/hero_desktop@2x.png": "/ryzen_ape_nft/static/media/hero_desktop@2x.8b66b82224cef936159c.png",
     "static/media/BiroScriptPlus-Bold.ttf": "/ryzen_ape_nft/static/media/BiroScriptPlus-Bold.d59732f3d22e3d024577.ttf",
@@ -23,11 +23,11 @@
     "static/media/slick.ttf": "/ryzen_ape_nft/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/ryzen_ape_nft/index.html",
     "static/media/slick.woff": "/ryzen_ape_nft/static/media/slick.295183786cd8a1389865.woff",
-    "main.9000b924.css.map": "/ryzen_ape_nft/static/css/main.9000b924.css.map",
-    "main.6c867ee7.js.map": "/ryzen_ape_nft/static/js/main.6c867ee7.js.map"
+    "main.cf805512.css.map": "/ryzen_ape_nft/static/css/main.cf805512.css.map",
+    "main.beef6da7.js.map": "/ryzen_ape_nft/static/js/main.beef6da7.js.map"
   },
   "entrypoints": [
-    "static/css/main.9000b924.css",
-    "static/js/main.6c867ee7.js"
+    "static/css/main.cf805512.css",
+    "static/js/main.beef6da7.js"
   ]
 }
