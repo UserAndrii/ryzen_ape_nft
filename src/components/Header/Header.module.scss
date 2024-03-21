@@ -1,12 +1,15 @@
 @import '/src/styles/variables.scss';
 @import '/src/styles/mixins.scss';
 
+.container {
+  padding: 54px 8px 0px;
+}
+
 .header {
-  height: 542px;
   min-width: 344px;
   max-width: 404px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 8px 8px 19px;
 
   border-radius: 12px;
   background-color: $accent-color;
@@ -28,6 +31,51 @@
 .header__icon {
   fill: $second-text-color;
   transition: fill $transition;
+}
+
+.header__menu_btn {
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background-color: $btn-background-color;
+
+  & span {
+    position: relative;
+    font-family: 'MessinaSansMono-SemiBold', monospace;
+    @include text(600, 12px, 14px);
+    color: $second-text-color;
+    transition: color $transition;
+  }
+
+  &:hover span,
+  &:focus span {
+    color: $main-text-color;
+  }
+
+  & span::after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+
+    width: 0%;
+    height: 1px;
+
+    border-radius: 1px;
+    background-color: $main-text-color;
+    transition: width $transition;
+  }
+
+  &:hover span::after,
+  &:focus span::after {
+    width: 100%;
+  }
 }
 
 .header__main_container {
@@ -101,26 +149,6 @@
   color: $second-text-color;
   @include text(400, 16px, 27px);
   margin-top: 8px;
-}
-
-.header__menu_btn {
-  font-family: 'MessinaSansMono-SemiBold', monospace;
-  @include text(600, 12px, 14px);
-  width: 48px;
-  height: 48px;
-
-  padding: 0;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-
-  background-color: $btn-background-color;
-  transition: color $transition;
-
-  &:hover,
-  &:focus {
-    color: $main-text-color;
-  }
 }
 
 .header__hero_container {

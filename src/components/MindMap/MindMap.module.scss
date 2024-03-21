@@ -1,0 +1,42 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.map {
+  padding: 60px 72px 52px;
+  min-width: 360px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.map__title {
+  font-family: 'Right Grotesk', sans-serif;
+  color: $main-text-color;
+  @include text(900, 44px, 40px);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.map__list_slider {
+}
+
+.map__list {
+  display: none;
+}
+
+.map__btn_container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+}
+
+.map__buttom {
+  font-family: 'BiroScriptPlus-Bold', sans-serif;
+  @include text(400, 24px, 24px);
+
+  border: none;
+  cursor: pointer;
+  color: $main-text-color;
+  background-color: inherit;
+  transition: color $transition;
+}

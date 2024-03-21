@@ -8,6 +8,7 @@ declare module '*.sass' {
 }
 
 declare module 'react-markup';
+declare module 'react-slick';
 declare module '*.scss';
 declare module '*.module.scss';
 declare module '*.webp';

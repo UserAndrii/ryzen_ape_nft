@@ -1,0 +1,57 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.map {
+  &:hover .map__content,
+  &:focus .map__content {
+    background-color: $accent-color;
+  }
+
+  &:hover .map__text,
+  &:focus .map__text {
+    opacity: 0;
+  }
+
+  &:hover .map__icon,
+  &:focus .map__icon {
+    opacity: 1;
+  }
+}
+
+.map__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 216px;
+  height: 242px;
+  padding: 24px 12px;
+
+  border-radius: 12px;
+  background-color: $second-background-color;
+  transition: background-color $transition;
+}
+
+.map__text {
+  color: $main-text-color;
+  @include text();
+  transition: opacity $transition;
+}
+
+.map__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 36px;
+  height: 36px;
+  opacity: 0;
+  transition: opacity $transition;
+}
+
+.map__title {
+  font-family: 'Right Grotesk', sans-serif;
+  color: $main-text-color;
+  @include text(900, 32px, 32px);
+}
