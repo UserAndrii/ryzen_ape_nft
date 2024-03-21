@@ -68,27 +68,27 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
 
           <ul>
             <li className={s.menu__item}>
-              <a href="#" className={s.menu__link}>
+              <a href="#about" className={s.menu__link}>
                 ABOUT
               </a>
             </li>
             <li className={s.menu__item}>
-              <a href="#" className={s.menu__link}>
+              <a href="#mindMap" className={s.menu__link}>
                 M-MAP
               </a>
             </li>
             <li className={s.menu__item}>
-              <a href="#" className={s.menu__link}>
+              <a href="#faq" className={s.menu__link}>
                 FAQ
               </a>
             </li>
             <li className={s.menu__item}>
-              <a href="#" className={s.menu__link}>
+              <a href="#arts" className={s.menu__link}>
                 ARTS
               </a>
             </li>
             <li className={s.menu__item}>
-              <a href="#" className={s.menu__link}>
+              <a href="#mint" className={s.menu__link}>
                 MINT
               </a>
             </li>
