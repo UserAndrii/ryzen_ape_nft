@@ -4,9 +4,17 @@
 .container {
   padding: 54px 8px 0px;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 9px 16px 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 16px 16px 0;
   }
 }
 
@@ -22,10 +30,21 @@
   border-radius: 12px;
   background-color: $accent-color;
 
-  @media (768px <= width <= 1279px) {
-    padding: 12px 12px 0;
-    max-width: 736px;
+  @media screen and (min-width: 768px) {
     height: 421px;
+    max-width: 736px;
+    padding: 12px 12px 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 677px;
+    max-width: 1248px;
+    padding: 24px 16px 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1408px;
+    padding: 24px 96px 0;
   }
 }
 
@@ -47,6 +66,11 @@
   height: 32px;
   fill: $second-text-color;
   transition: fill $transition;
+
+  @media screen and (min-width: 1280px) {
+    width: 72px;
+    height: 50px;
+  }
 }
 
 .header__nav {
@@ -63,9 +87,19 @@
   background-color: $btn-background-color;
   transition: width $transition;
 
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+  }
+
   &.open {
-    @media (768px <= width <= 1279px) {
+    @media screen and (min-width: 768px) {
       width: 288px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 480px;
     }
   }
 }
@@ -86,6 +120,10 @@
     @include text(600, 12px, 14px);
     color: $second-text-color;
     transition: color $transition;
+
+    @media screen and (min-width: 1280px) {
+      @include text(600, 16px, 19px);
+    }
   }
 
   &:hover span,
@@ -112,6 +150,11 @@
   &:focus span::after {
     width: 100%;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .header__menu_link {
@@ -129,6 +172,12 @@
 
   width: 48px;
   height: 48px;
+
+  @media screen and (min-width: 1280px) {
+    @include text(600, 16px, 19px);
+    width: 80px;
+    height: 80px;
+  }
 
   & span {
     position: relative;
@@ -173,11 +222,19 @@
   position: absolute;
   top: 8px;
   right: 0;
+
+  @media screen and (min-width: 1280px) {
+    top: 16px;
+  }
 }
 
 .header__media_item {
   &:not(:last-of-type) {
     margin-bottom: 8px;
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -192,6 +249,12 @@
   border-radius: 8px;
   background-color: $btn-background-color;
 
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+  }
+
   &:hover .header__media_icon,
   &:focus .header__media_icon {
     fill: $main-text-color;
@@ -204,7 +267,7 @@
   fill: $second-text-color;
   transition: fill $transition;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     width: 24px;
     height: 24px;
   }

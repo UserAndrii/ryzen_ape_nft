@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import s from './MindMap.module.scss';
-import Map from '../MindMapItem';
+import MindMapItem from '../MindMapItem';
 import mindData from './mindData';
 import SliderWrapper from '../SliderWrapper';
 
@@ -16,7 +16,7 @@ const MindMap: React.FC = () => {
         <SliderWrapper>
           {mindData.map(({ title, text, link }, index) => (
             <li key={index} style={{ margin: '0 auto' }}>
-              <Map title={title} text={text} link={link} />
+              <MindMapItem title={title} text={text} link={link} />
             </li>
           ))}
         </SliderWrapper>
@@ -25,7 +25,7 @@ const MindMap: React.FC = () => {
       <ul className={s.map__list}>
         {mindData.map(({ title, text, link }, index) => (
           <li key={index}>
-            <Map title={title} text={text} link={link} />
+            <MindMapItem title={title} text={text} link={link} />
           </li>
         ))}
       </ul>

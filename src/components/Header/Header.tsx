@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   const toggleMenu = () => {
     setIsOpenMenu(prev => !prev);
 
-    if (!isOpenMenu && window.innerWidth < 767) {
+    if (!isOpenMenu && window.innerWidth <= 767) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'hidden auto';
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
           </ul>
         </div>
         <Hero />
-        {window.innerWidth < 767 && (
+        {window.innerWidth <= 767 && (
           <BurgerMenu isOpen={isOpenMenu} onClick={toggleMenu} />
         )}
       </div>

@@ -5,10 +5,15 @@
   padding: 8px;
   border-radius: 12px;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     position: relative;
     border-radius: 16px;
     padding: 18px 16px 23px 188px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    border-radius: 24px;
+    padding: 24px 24px 24px 296px;
   }
 }
 
@@ -28,9 +33,14 @@
     color: $accent-color;
   }
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     gap: 24px;
     margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 27px;
+    margin-bottom: 36px;
   }
 }
 
@@ -40,9 +50,16 @@
   @include text(400, 12px, 20px);
   white-space: nowrap;
   transition: color $transition;
+  padding-top: 4px;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     @include text(400, 16px, 27px);
+    padding-top: 6px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include text(400, 24px, 40px);
+    padding-top: 14px;
   }
 }
 
@@ -52,8 +69,12 @@
   text-transform: uppercase;
   transition: color $transition;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     @include text(900, 32px, 32px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include text(900, 64px, 64px);
   }
 }
 
@@ -68,6 +89,12 @@
 
   width: 148px;
   border-radius: 16px;
+
+  @media screen and (min-width: 1280px) {
+    width: 248px;
+    border-radius: 24px;
+    transform: translateY(-50%) rotate(-8deg);
+  }
 }
 
 .card__text {
@@ -75,8 +102,13 @@
   padding-left: 31px;
   text-transform: uppercase;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     padding-left: 58px;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include text(400, 16px, 19px);
+    padding-left: 77px;
   }
 }
 

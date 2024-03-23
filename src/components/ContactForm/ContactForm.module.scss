@@ -6,9 +6,14 @@
   flex-direction: column;
   gap: 16px;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     width: 247px;
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 397px;
+    gap: 24px;
   }
 }
 
@@ -27,6 +32,14 @@
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   background-color: $second-background-color;
+
+  @media screen and (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
 }
 
 .form__icon {
@@ -56,9 +69,20 @@
   text-transform: uppercase;
   transition: all $transition;
 
+  @media screen and (min-width: 1280px) {
+    height: 64px;
+    @include text(400, 16px, 19px);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
   &::placeholder {
     color: $indicative-text-color;
     @include text();
+
+    @media screen and (min-width: 1280px) {
+      @include text(400, 16px, 19px);
+    }
   }
 
   &:hover,
@@ -89,6 +113,12 @@
   &:focus {
     color: $second-text-color;
   }
+
+  @media screen and (min-width: 1280px) {
+    @include text(400, 28px, 34px);
+    border-radius: 12px;
+    height: 70px;
+  }
 }
 
 .form__error {
@@ -100,4 +130,9 @@
   @include text(400, 10px, 12px);
   text-transform: uppercase;
   text-align: end;
+
+  @media screen and (min-width: 1280px) {
+    @include text();
+    bottom: -15px;
+  }
 }

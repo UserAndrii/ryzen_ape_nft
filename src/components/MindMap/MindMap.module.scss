@@ -18,7 +18,7 @@
 .map__list {
   display: none;
 
-  @media (768px <= width <= 1279px) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
