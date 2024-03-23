@@ -1,5 +1,23 @@
+@import '/src/styles/variables.scss';
+
 @mixin text($font-weight: 400, $font-size: 12px, $line-height: 14px) {
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
+}
+
+%container {
+  padding: 60px 72px 0;
+  min-width: 360px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+%title {
+  font-family: 'Right Grotesk', sans-serif;
+  color: $main-text-color;
+  @include text(900, 44px, 40px);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
 }

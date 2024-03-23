@@ -1,0 +1,24 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.btn__container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+}
+
+.btn {
+  font-family: 'BiroScriptPlus-Bold', sans-serif;
+  @include text(400, 24px, 24px);
+
+  border: none;
+  cursor: pointer;
+  color: $main-text-color;
+  background-color: inherit;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

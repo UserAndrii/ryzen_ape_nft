@@ -1,0 +1,15 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.arts {
+  @extend %container;
+}
+
+.arts__title {
+  @extend %title;
+}
+
+.arts__item {
+  border-radius: 23px;
+  overflow: hidden;
+}

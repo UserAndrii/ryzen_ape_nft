@@ -1,0 +1,13 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.footer {
+  @extend %container;
+  padding-bottom: 24px;
+}
+
+.copyright {
+  @include text(400, 12px, 14px);
+  text-transform: uppercase;
+  text-align: center;
+}

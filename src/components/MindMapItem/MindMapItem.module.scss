@@ -1,34 +1,12 @@
 @import '/src/styles/variables.scss';
 @import '/src/styles/mixins.scss';
 
-.map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover .map__content,
-  &:focus .map__content {
-    background-color: $accent-color;
-  }
-
-  &:hover .map__text,
-  &:focus .map__text {
-    opacity: 0;
-  }
-
-  &:hover .map__icon,
-  &:focus .map__icon {
-    opacity: 1;
-  }
-}
-
 .map__content {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  width: 216px;
+  min-width: 216px;
   height: 242px;
   padding: 24px 12px;
 
@@ -37,10 +15,11 @@
   transition: background-color $transition;
 }
 
-.map__text {
-  color: $main-text-color;
-  @include text();
-  transition: opacity $transition;
+.map__link {
+  position: relative;
+  justify-content: end;
+  background-color: $accent-color;
+  cursor: pointer;
 }
 
 .map__icon {
@@ -50,12 +29,17 @@
 
   width: 36px;
   height: 36px;
-  opacity: 0;
-  transition: opacity $transition;
+}
+
+.map__text {
+  color: $main-text-color;
+  @include text();
+  text-transform: uppercase;
 }
 
 .map__title {
   font-family: 'Right Grotesk', sans-serif;
   color: $main-text-color;
   @include text(900, 32px, 32px);
+  text-transform: uppercase;
 }

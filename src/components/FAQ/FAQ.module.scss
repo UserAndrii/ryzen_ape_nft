@@ -1,0 +1,9 @@
+@import '/src/styles/mixins.scss';
+
+.faq {
+  @extend %container;
+}
+
+.faq__title {
+  @extend %title;
+}

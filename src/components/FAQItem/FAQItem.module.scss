@@ -1,0 +1,57 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.card {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.card__head {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+
+  &:focus .card__position,
+  &:hover .card__position {
+    color: $main-text-color;
+  }
+
+  &:focus .card__title,
+  &:hover .card__title {
+    color: $accent-color;
+  }
+}
+
+.card__position {
+  font-family: 'BiroScriptPlus-Bold', sans-serif;
+  color: $accent-color;
+  @include text(400, 12px, 20px);
+  white-space: nowrap;
+  transition: color $transition;
+}
+
+.card__title {
+  font-family: 'Right Grotesk', sans-serif;
+  @include text(900, 20px, 20px);
+  text-transform: uppercase;
+  transition: color $transition;
+}
+
+.card__text {
+  @include text();
+  padding-top: 10px;
+  padding-left: 31px;
+  text-transform: uppercase;
+}
+
+.card__active {
+  background-color: $second-text-color;
+
+  &.card__position {
+    color: $main-text-color;
+  }
+
+  &.card__title {
+    color: $accent-color;
+  }
+}

@@ -3,10 +3,11 @@
 
 .about {
   position: relative;
-  padding: 60px 72px 52px;
-  min-width: 360px;
-  max-width: 420px;
-  margin: 0 auto;
+}
+
+.about__container {
+  @extend %container;
+  padding-bottom: 52px;
 }
 
 .about__title {
@@ -42,6 +43,11 @@
   gap: 16px;
 }
 
+.about__icon {
+  width: 24px;
+  height: 24px;
+}
+
 .about__text {
   @include text();
   text-align: center;
@@ -58,7 +64,7 @@
   left: 0;
   bottom: 0;
 
-  width: 100%;
+  width: 100vw;
   height: 52px;
   background-color: $accent-color;
 
@@ -79,4 +85,9 @@
     @include text(900, 36px, 36px);
     text-transform: uppercase;
   }
+}
+
+.about__banner_icon {
+  width: 36px;
+  height: 36px;
 }

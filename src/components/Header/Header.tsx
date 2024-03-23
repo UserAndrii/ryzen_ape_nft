@@ -22,8 +22,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className={s.container}>
-      <header className={s.header}>
+    <header className={s.container}>
+      <div className={s.header}>
         <div className={s.header__menu}>
           <a href="./" className={s.header__logo}>
             <Logo className={s.header__icon} />
@@ -75,8 +75,8 @@ const Header: React.FC = () => {
         </div>
         <Hero />
         <BurgerMenu isOpen={isOpenMenu} onClick={toggleMenu} />
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 

@@ -11,7 +11,7 @@ const Logomark: React.FC<IIconProps> = ({ className, size = '16' }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g clip-path="url(#clip0_51_844)">
+      <g clipPath="url(#clip0_51_844)">
         <mask
           id="mask0_51_844"
           maskUnits="userSpaceOnUse"
