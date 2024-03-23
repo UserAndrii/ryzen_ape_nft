@@ -13,16 +13,16 @@ import aboutDesk2x from '../../images/nft/about/about_desktop@2x.png';
 
 const About: React.FC = () => {
   return (
-    <section className={s.about}>
+    <section className={s.about} id="about">
       <div className={s.about__container}>
         <h2 className={s.about__title}>
-          A Story that started with <span>one simple</span>
-          <span>ape</span>
+          A Story that started with <span>one simple</span> <span>ape</span>
         </h2>
 
         <p className={s.about__content}>
           <span>WHO GOT</span> FED UP WITH BORING AND HYPOCRITIC COMMONPLACE
-          THIS IS HOW THE IDEA OF ESCAPING AND DYNAMIC JOURNEY ON THE YACHT
+          THIS IS HOW THE IDEA OF ESCAPING AND DYNAMIC JOURNEY ON THE{' '}
+          <span>YACHT</span>
         </p>
 
         <div className={s.about__text_container}>

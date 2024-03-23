@@ -9,10 +9,10 @@ const FAQ: React.FC = () => {
   const [selectedCard, setSelectedCard] = useState(1);
 
   return (
-    <section className={s.faq}>
+    <section className={s.faq} id="faq">
       <h2 className={s.faq__title}>FAQ</h2>
 
-      <ul>
+      <ul className={s.faq__list}>
         {FAQData.map(({ id, title, description, image }) => (
           <li key={id} onClick={() => setSelectedCard(id)}>
             <FAQItem

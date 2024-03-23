@@ -9,7 +9,7 @@ import SliderWrapper from '../SliderWrapper';
 
 const MindMap: React.FC = () => {
   return (
-    <section className={s.map}>
+    <section className={s.map} id="m-map">
       <h2 className={s.map__title}>Mind Map</h2>
 
       <ul className={s.map__list_slider}>

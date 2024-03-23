@@ -11,6 +11,11 @@
   min-width: 360px;
   max-width: 420px;
   margin: 0 auto;
+
+  @media (768px <= width <= 1279px) {
+    padding: 80px 88px 0;
+    max-width: 768px;
+  }
 }
 
 %title {
@@ -20,4 +25,9 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 24px;
+
+  @media (768px <= width <= 1279px) {
+    @include text(900, 80px, 80px);
+    margin-bottom: 40px;
+  }
 }

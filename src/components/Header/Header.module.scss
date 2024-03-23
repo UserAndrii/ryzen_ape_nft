@@ -3,9 +3,17 @@
 
 .container {
   padding: 54px 8px 0px;
+
+  @media (768px <= width <= 1279px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+
   min-width: 344px;
   max-width: 404px;
   margin: 0 auto;
@@ -13,6 +21,12 @@
 
   border-radius: 12px;
   background-color: $accent-color;
+
+  @media (768px <= width <= 1279px) {
+    padding: 12px 12px 0;
+    max-width: 736px;
+    height: 421px;
+  }
 }
 
 .header__menu {
@@ -29,8 +43,31 @@
 }
 
 .header__icon {
+  width: 48px;
+  height: 32px;
   fill: $second-text-color;
   transition: fill $transition;
+}
+
+.header__nav {
+  z-index: 5;
+  backdrop-filter: blur(5px);
+}
+
+.header__menu_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: $btn-background-color;
+  transition: width $transition;
+
+  &.open {
+    @media (768px <= width <= 1279px) {
+      width: 288px;
+    }
+  }
 }
 
 .header__menu_btn {
@@ -39,10 +76,9 @@
 
   padding: 0;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
 
-  background-color: $btn-background-color;
+  background-color: transparent;
 
   & span {
     position: relative;
@@ -78,8 +114,59 @@
   }
 }
 
+.header__menu_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'MessinaSansMono-SemiBold', monospace;
+  @include text(600, 12px, 14px);
+  color: $second-text-color;
+  opacity: 0;
+  transition: color $transition, opacity $transition;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  width: 48px;
+  height: 48px;
+
+  & span {
+    position: relative;
+  }
+
+  &:hover span,
+  &:focus span {
+    color: $main-text-color;
+  }
+
+  & span::after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+
+    width: 0%;
+    height: 1px;
+
+    border-radius: 1px;
+    background-color: $main-text-color;
+    transition: width $transition;
+  }
+
+  &:hover span::after,
+  &:focus span::after {
+    width: 100%;
+  }
+
+  &.open {
+    opacity: 1;
+  }
+}
+
 .header__main_container {
   position: relative;
+  z-index: 5;
 }
 
 .header__media_links {
@@ -116,4 +203,9 @@
   height: 16px;
   fill: $second-text-color;
   transition: fill $transition;
+
+  @media (768px <= width <= 1279px) {
+    width: 24px;
+    height: 24px;
+  }
 }

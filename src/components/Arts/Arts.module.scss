@@ -3,13 +3,34 @@
 
 .arts {
   @extend %container;
+
+  @media (768px <= width <= 1279px) {
+    padding: 80px 76px 0;
+  }
 }
 
 .arts__title {
   @extend %title;
 }
 
-.arts__item {
+.arts__slide {
+  @media (768px <= width <= 1279px) {
+    padding: 0 12px;
+  }
+}
+
+.arts__image {
+  overflow: hidden;
+  max-height: 326px;
+  max-width: 276px;
   border-radius: 23px;
   overflow: hidden;
+
+  @media (768px <= width <= 1279px) {
+    height: 326px;
+    max-width: 284px;
+
+    object-fit: cover;
+    background-position: center;
+  }
 }

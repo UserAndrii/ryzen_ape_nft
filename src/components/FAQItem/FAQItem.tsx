@@ -9,6 +9,7 @@ const FAQItem: React.FC<IFAQItemProps> = ({
   id,
   title,
   description,
+  image,
 }) => {
   return (
     <div className={cn(s.card, { [s.card__active]: active })}>
@@ -20,6 +21,24 @@ const FAQItem: React.FC<IFAQItemProps> = ({
           {title}
         </h3>
       </div>
+
+      <picture>
+        <source
+          type="image/png"
+          media="(min-width: 768px)"
+          srcSet={`${image?.[0]} 1x, ${image?.[1]} 2x`}
+        />
+
+        {active && (
+          <img
+            src={`${image?.[0]}`}
+            alt="Ape"
+            width={216}
+            height={292}
+            className={s.card__image}
+          />
+        )}
+      </picture>
 
       {active && <p className={s.card__text}>{description}</p>}
     </div>

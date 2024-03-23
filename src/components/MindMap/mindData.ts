@@ -12,7 +12,7 @@ const mindData = [
     text: 'Launch your own token, the proceeds of which will go to a global fund to LAUNCH YACHT CLUB AND PROMOTE it',
   },
   {
-    title: 'Learn more in mind map',
+    title: '<span>Learn</span> <span>more</span> in mind map',
     text: '',
     link: 'https://www.softryzen.com/',
   },

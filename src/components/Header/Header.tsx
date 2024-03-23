@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import s from './Header.module.scss';
+import { Link } from 'react-scroll';
+import cn from 'classnames';
 
+import s from './Header.module.scss';
 import Twitter from '../../images/icons/Twitter';
 import Discord from '../../images/icons/Discord';
 import Logomark from '../../images/icons/Logomark';
@@ -10,11 +12,13 @@ import Logo from '../../images/icons/Logo';
 import BurgerMenu from '../BurgerMenu';
 
 const Header: React.FC = () => {
+  const menu = ['mint', 'arts', 'faq', 'm-map', 'about'];
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpenMenu(prevState => !prevState);
-    if (!isOpenMenu) {
+    setIsOpenMenu(prev => !prev);
+
+    if (!isOpenMenu && window.innerWidth < 767) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'hidden auto';
@@ -29,14 +33,40 @@ const Header: React.FC = () => {
             <Logo className={s.header__icon} />
           </a>
 
-          <button
-            type="button"
-            aria-label="open the menu"
-            className={s.header__menu_btn}
-            onClick={toggleMenu}
-          >
-            <span>MENU</span>
-          </button>
+          <nav className={s.header__nav}>
+            <ul
+              className={cn(s.header__menu_wrapper, { [s.open]: isOpenMenu })}
+            >
+              <li>
+                <button
+                  type="button"
+                  aria-label="open the menu"
+                  className={s.header__menu_btn}
+                  onClick={toggleMenu}
+                >
+                  <span>{isOpenMenu ? 'CLOSE' : 'MENU'}</span>
+                </button>
+              </li>
+
+              {menu.map((id, index) => (
+                <li key={index}>
+                  <Link
+                    className={cn(s.header__menu_link, {
+                      [s.open]: isOpenMenu,
+                    })}
+                    to={id}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    onClick={() => setIsOpenMenu(prev => !prev)}
+                  >
+                    <span>{id}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         <div className={s.header__main_container}>
@@ -74,7 +104,9 @@ const Header: React.FC = () => {
           </ul>
         </div>
         <Hero />
-        <BurgerMenu isOpen={isOpenMenu} onClick={toggleMenu} />
+        {window.innerWidth < 767 && (
+          <BurgerMenu isOpen={isOpenMenu} onClick={toggleMenu} />
+        )}
       </div>
     </header>
   );

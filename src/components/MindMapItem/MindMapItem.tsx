@@ -13,7 +13,10 @@ const MindMapItem: React.FC<IMapProps> = ({ title, text, link }) => {
       className={cn(s.map__content, s.map__link)}
     >
       <Arrow className={s.map__icon} />
-      <h3 className={s.map__title}>{title}</h3>
+      <h3
+        className={s.map__title}
+        dangerouslySetInnerHTML={{ __html: title }}
+      ></h3>
     </a>
   ) : (
     <div className={s.map__content}>

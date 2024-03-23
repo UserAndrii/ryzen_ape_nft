@@ -42,6 +42,8 @@
 }
 
 .logo__icon {
+  width: 48px;
+  height: 32px;
   fill: $main-text-color;
   transition: fill $transition;
 }
@@ -97,11 +99,13 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+  gap: 16px;
 }
 
 .menu__item {
   display: flex;
   justify-content: center;
+
   &:not(:last-of-type) {
     margin-bottom: 16px;
   }
@@ -110,6 +114,8 @@
 .menu__link {
   @include text(600, 24px, 29px);
   transition: color $transition;
+  cursor: pointer;
+  text-transform: uppercase;
 
   &:hover,
   &:focus {

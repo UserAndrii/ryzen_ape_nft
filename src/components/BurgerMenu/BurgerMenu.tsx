@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import { Link } from 'react-scroll';
 
 import s from './BurgerMenu.module.scss';
 import Logo from '../../images/icons/Logo';
@@ -10,6 +11,8 @@ import Twitter from '../../images/icons/Twitter';
 import { IBurgerMenuProps } from '../../types';
 
 const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
+  const menu = ['mint', 'arts', 'faq', 'm-map', 'about'];
+
   return (
     <div
       className={cn(s.container, {
@@ -67,31 +70,23 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
           </ul>
 
           <ul>
-            <li className={s.menu__item}>
-              <a href="#about" className={s.menu__link}>
-                ABOUT
-              </a>
-            </li>
-            <li className={s.menu__item}>
-              <a href="#mindMap" className={s.menu__link}>
-                M-MAP
-              </a>
-            </li>
-            <li className={s.menu__item}>
-              <a href="#faq" className={s.menu__link}>
-                FAQ
-              </a>
-            </li>
-            <li className={s.menu__item}>
-              <a href="#arts" className={s.menu__link}>
-                ARTS
-              </a>
-            </li>
-            <li className={s.menu__item}>
-              <a href="#mint" className={s.menu__link}>
-                MINT
-              </a>
-            </li>
+            {menu
+              .map((id, index) => (
+                <li key={index} className={s.menu__item}>
+                  <Link
+                    className={s.menu__link}
+                    to={id}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    onClick={onClick}
+                  >
+                    {id}
+                  </Link>
+                </li>
+              ))
+              .reverse()}
           </ul>
         </nav>
 

@@ -6,7 +6,7 @@ import Cross from '../../images/icons/Сross';
 
 const ContactUs: React.FC = () => {
   return (
-    <section className={s.contact}>
+    <section className={s.contact} id="mint">
       <h2 className={s.contact__title}>Are you in?</h2>
 
       <div className={s.contact__text_container}>

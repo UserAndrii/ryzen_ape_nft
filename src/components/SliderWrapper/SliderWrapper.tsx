@@ -22,12 +22,30 @@ const SliderWrapper: React.FC<ISliderProp> = ({ children }) => {
   const settings = {
     dots: false,
     infinite: false,
-    cssEase: 'linear',
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipe: true,
     arrows: false,
-    fade: true,
+    lazyLoad: 'progressive',
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    // variableWidth: true,
+    // rows: 1,
+    // adaptiveHeight: true,
   };
 
   return (

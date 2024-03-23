@@ -7,3 +7,13 @@
 .faq__title {
   @extend %title;
 }
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (768px <= width <= 1279px) {
+    gap: 18px;
+  }
+}

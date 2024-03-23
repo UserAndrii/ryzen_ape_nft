@@ -4,11 +4,18 @@
 .card {
   padding: 8px;
   border-radius: 12px;
+
+  @media (768px <= width <= 1279px) {
+    position: relative;
+    border-radius: 16px;
+    padding: 18px 16px 23px 188px;
+  }
 }
 
 .card__head {
   display: flex;
   gap: 8px;
+  margin-bottom: 10px;
   cursor: pointer;
 
   &:focus .card__position,
@@ -20,6 +27,11 @@
   &:hover .card__title {
     color: $accent-color;
   }
+
+  @media (768px <= width <= 1279px) {
+    gap: 24px;
+    margin-bottom: 12px;
+  }
 }
 
 .card__position {
@@ -28,6 +40,10 @@
   @include text(400, 12px, 20px);
   white-space: nowrap;
   transition: color $transition;
+
+  @media (768px <= width <= 1279px) {
+    @include text(400, 16px, 27px);
+  }
 }
 
 .card__title {
@@ -35,13 +51,33 @@
   @include text(900, 20px, 20px);
   text-transform: uppercase;
   transition: color $transition;
+
+  @media (768px <= width <= 1279px) {
+    @include text(900, 32px, 32px);
+  }
+}
+
+.card__image {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-16deg);
+
+  width: 148px;
+  border-radius: 16px;
 }
 
 .card__text {
   @include text();
-  padding-top: 10px;
   padding-left: 31px;
   text-transform: uppercase;
+
+  @media (768px <= width <= 1279px) {
+    padding-left: 58px;
+  }
 }
 
 .card__active {

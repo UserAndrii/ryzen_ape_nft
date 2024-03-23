@@ -13,6 +13,11 @@
   border-radius: 12px;
   background-color: $second-background-color;
   transition: background-color $transition;
+
+  @media (768px <= width <= 1279px) {
+    padding: 24px;
+    border-radius: 16px;
+  }
 }
 
 .map__link {
@@ -24,17 +29,28 @@
 
 .map__icon {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 24px;
+  right: 12px;
 
   width: 36px;
   height: 36px;
+
+  @media (768px <= width <= 1279px) {
+    width: 48px;
+    height: 48px;
+    right: 24px;
+  }
 }
 
 .map__text {
   color: $main-text-color;
   @include text();
   text-transform: uppercase;
+
+  @media (768px <= width <= 1279px) {
+    width: 128px;
+    margin-left: auto;
+  }
 }
 
 .map__title {
@@ -42,4 +58,10 @@
   color: $main-text-color;
   @include text(900, 32px, 32px);
   text-transform: uppercase;
+
+  @media (768px <= width <= 1279px) {
+    & span {
+      display: block;
+    }
+  }
 }

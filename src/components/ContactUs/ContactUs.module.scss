@@ -15,6 +15,11 @@
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
+
+  @media (768px <= width <= 1279px) {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .contact__icon {
@@ -26,4 +31,8 @@
   @include text(400, 16px, 19px);
   text-align: center;
   text-transform: uppercase;
+
+  @media (768px <= width <= 1279px) {
+    width: 397px;
+  }
 }

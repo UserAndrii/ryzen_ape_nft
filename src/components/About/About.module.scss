@@ -8,6 +8,13 @@
 .about__container {
   @extend %container;
   padding-bottom: 52px;
+
+  @media (768px <= width <= 1279px) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .about__title {
@@ -23,6 +30,16 @@
 
   & span:last-child {
     display: block;
+
+    @media (768px <= width <= 1279px) {
+      display: inline;
+    }
+  }
+
+  @media (768px <= width <= 1279px) {
+    @include text(900, 60px, 60px);
+    width: 269px;
+    margin-bottom: 68px;
   }
 }
 
@@ -33,6 +50,21 @@
 
   & span {
     display: block;
+
+    @media (768px <= width <= 1279px) {
+      display: inline;
+    }
+  }
+
+  @media (768px <= width <= 1279px) {
+    width: 275px;
+    height: 114px;
+    margin: 0;
+    padding-top: 11px;
+
+    & span:nth-child(2) {
+      display: block;
+    }
   }
 }
 
@@ -41,6 +73,12 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin-bottom: 40px;
+
+  @media (768px <= width <= 1279px) {
+    width: 269px;
+    margin-bottom: 36px;
+  }
 }
 
 .about__icon {
@@ -51,12 +89,23 @@
 .about__text {
   @include text();
   text-align: center;
-  margin-bottom: 40px;
+
+  @media (768px <= width <= 1279px) {
+    @include text(400, 16px, 19px);
+    margin: 0;
+  }
 }
 
 .about_image {
   width: 216px;
   margin: 0 auto;
+
+  @media (768px <= width <= 1279px) {
+    position: absolute;
+    bottom: 52px;
+    right: 88px;
+    width: 313px;
+  }
 }
 
 .about_banner {

@@ -1,15 +1,9 @@
 import React from 'react';
 import { ILogoProps } from '../../types';
 
-const Logo: React.FC<ILogoProps> = ({
-  className,
-  width = '48',
-  height = '32',
-}) => {
+const Logo: React.FC<ILogoProps> = ({ className }) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 72 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

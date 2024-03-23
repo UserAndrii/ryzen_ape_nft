@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Hero.module.scss';
+import { Link } from 'react-scroll';
 
 import heroMob from '../../images/nft/hero/hero_mobile.png';
 import heroMob2x from '../../images/nft/hero/hero_mobile@2x.png';
@@ -12,7 +13,9 @@ const Hero: React.FC = () => {
   return (
     <div className={s.hero__main}>
       <p className={s.hero__subtitle}>diD yOu seE iT ?</p>
-      <h1 className={s.hero__title}>YACHT APES</h1>
+      <h1 className={s.hero__title}>
+        YACHT <span>APES</span>
+      </h1>
       <p className={s.hero__description}>Apes aRe eveRywhere</p>
 
       <div className={s.hero__container}>
@@ -41,9 +44,17 @@ const Hero: React.FC = () => {
           />
         </picture>
 
-        <a href="#mint" className={s.hero__link_meet}>
+        <Link
+          className={s.hero__link_meet}
+          to="mint"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
           MEET APES
-        </a>
+        </Link>
+        {/* <a href="#mint" className={s.hero__link_meet}></a> */}
       </div>
 
       <p className={s.hero__text}>

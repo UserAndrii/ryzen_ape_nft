@@ -4,6 +4,12 @@
 .footer {
   @extend %container;
   padding-bottom: 24px;
+
+  @media (768px <= width <= 1279px) {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
 }
 
 .copyright {
