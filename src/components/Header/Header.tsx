@@ -29,8 +29,8 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
 
   return (
     <div className={s.container}>
-      <div className={s.header}>
-        <header className={s.header__menu}>
+      <div className={s.content}>
+        <header className={s.header}>
           <a
             href="./"
             className={s.header__logo}
@@ -45,7 +45,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
             })}
           >
             <ul
-              className={cn(s.header__menu_wrapper, {
+              className={cn(s.header__menu, {
                 [s.open]: isOpenMenu,
                 [s.header__scrolled]: isScrolled,
               })}
@@ -87,48 +87,48 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
         </header>
 
         <div
-          className={cn(s.header__main_container, {
+          className={cn(s.media, {
             [s.header__scrolled]: isScrolled,
           })}
         >
-          <ul className={s.header__media_links}>
-            <li className={s.header__media_item}>
+          <ul className={s.media__links}>
+            <li className={s.media__item}>
               <a
                 href="https://discord.com/"
-                className={cn(s.header__media_link, {
+                className={cn(s.media__link, {
                   [s.header__scrolled]: isScrolled,
                 })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label="Link to Discord social network"
               >
-                <Discord className={s.header__media_icon} />
+                <Discord className={s.media__icon} />
               </a>
             </li>
-            <li className={s.header__media_item}>
+            <li className={s.media__item}>
               <a
                 href="https://www.softryzen.com/"
-                className={cn(s.header__media_link, {
+                className={cn(s.media__link, {
                   [s.header__scrolled]: isScrolled,
                 })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label="Link to SoftRyzen webapp"
               >
-                <Logomark className={s.header__media_icon} />
+                <Logomark className={s.media__icon} />
               </a>
             </li>
-            <li className={s.header__media_item}>
+            <li className={s.media__item}>
               <a
                 href="https://twitter.com/"
-                className={cn(s.header__media_link, {
+                className={cn(s.media__link, {
                   [s.header__scrolled]: isScrolled,
                 })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label="Link to Twitter social network"
               >
-                <Twitter className={s.header__media_icon} />
+                <Twitter className={s.media__icon} />
               </a>
             </li>
           </ul>
