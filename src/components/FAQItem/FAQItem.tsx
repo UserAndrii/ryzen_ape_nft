@@ -22,23 +22,24 @@ const FAQItem: React.FC<IFAQItemProps> = ({
         </h3>
       </div>
 
-      <picture>
-        <source
-          type="image/png"
-          media="(min-width: 768px)"
-          srcSet={`${image?.[0]} 1x, ${image?.[1]} 2x`}
-        />
+      {active && (
+        <picture>
+          <source
+            type="image/png"
+            media="(min-width: 768px)"
+            srcSet={`${image?.[0]} 1x, ${image?.[1]} 2x`}
+          />
 
-        {active && (
           <img
             src={`${image?.[0]}`}
-            alt="Ape"
+            alt={title}
             width={216}
             height={292}
             className={s.card__image}
+            loading="lazy"
           />
-        )}
-      </picture>
+        </picture>
+      )}
 
       {active && <p className={s.card__text}>{description}</p>}
     </div>

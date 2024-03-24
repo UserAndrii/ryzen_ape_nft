@@ -6,3 +6,4 @@ export type { IFAQItemProps } from './IFAQItemProps';
 export type { ISlideControlProps } from './ISlideControlProps';
 export type { ISliderProp } from './ISliderProp';
 export type { IContactFormValue } from './IContactFormValue';
+export type { IHeaderProp } from './IHeaderProp';

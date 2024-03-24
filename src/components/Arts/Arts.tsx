@@ -26,10 +26,11 @@ const Arts: React.FC = () => {
               />
               <img
                 src={`${image[0]}`}
-                alt="Apes"
+                alt="Ape collections"
                 width={216}
                 height={256}
                 className={s.arts__image}
+                loading="lazy"
               />
             </picture>
           </div>

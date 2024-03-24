@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
 
             <button
               type="submit"
-              aria-label="Submit form"
+              aria-label="Submit MINT form"
               className={s.form__submit}
             >
               {discord || metamask ? 'ERROR' : isMinted ? 'MINTED' : 'MINT'}

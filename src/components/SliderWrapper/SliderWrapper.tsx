@@ -43,9 +43,6 @@ const SliderWrapper: React.FC<ISliderProp> = ({ children }) => {
         },
       },
     ],
-    // variableWidth: true,
-    // rows: 1,
-    // adaptiveHeight: true,
   };
 
   return (

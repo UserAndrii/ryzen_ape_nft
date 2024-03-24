@@ -21,13 +21,18 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
     >
       <div className={cn(s.content)}>
         <div className={s.menu}>
-          <a href="./" className={s.logo}>
+          <a
+            href="./"
+            className={s.logo}
+            aria-label="Logo, link to the main page"
+            onClick={onClick}
+          >
             <Logo className={s.logo__icon} />
           </a>
 
           <button
             type="button"
-            aria-label="open the menu"
+            aria-label="Close the mobile menu"
             className={s.menu__btn}
             onClick={onClick}
           >
@@ -43,6 +48,7 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
                 className={s.media_link}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Link to Discord social network"
               >
                 <Discord className={s.media_icon} />
               </a>
@@ -53,6 +59,7 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
                 className={s.media_link}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Link to SoftRyzen webapp"
               >
                 <Logomark className={s.media_icon} />
               </a>
@@ -63,6 +70,7 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
                 className={s.media_link}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Link to Twitter social network"
               >
                 <Twitter className={s.media_icon} />
               </a>
@@ -81,6 +89,7 @@ const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClick }) => {
                     offset={0}
                     duration={500}
                     onClick={onClick}
+                    aria-label={`Link to the ${id} section`}
                   >
                     {id}
                   </Link>

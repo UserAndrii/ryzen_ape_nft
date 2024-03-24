@@ -12,15 +12,15 @@ const MindMap: React.FC = () => {
     <section className={s.map} id="m-map">
       <h2 className={s.map__title}>Mind Map</h2>
 
-      <ul className={s.map__list_slider}>
+      <div className={s.map__list_slider}>
         <SliderWrapper>
           {mindData.map(({ title, text, link }, index) => (
-            <li key={index} style={{ margin: '0 auto' }}>
+            <div key={index}>
               <MindMapItem title={title} text={text} link={link} />
-            </li>
+            </div>
           ))}
         </SliderWrapper>
-      </ul>
+      </div>
 
       <ul className={s.map__list}>
         {mindData.map(({ title, text, link }, index) => (

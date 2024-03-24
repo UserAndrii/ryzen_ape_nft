@@ -11,7 +11,7 @@ const SlideControlButtons: React.FC<ISlideControlProps> = ({
     <div className={s.btn__container}>
       <button
         type="button"
-        aria-label="Prev slide"
+        aria-label="Click to prev slide"
         className={s.btn}
         onClick={goToPrevSlide}
       >
@@ -19,7 +19,7 @@ const SlideControlButtons: React.FC<ISlideControlProps> = ({
       </button>
       <button
         type="button"
-        aria-label="Next slide"
+        aria-label="Click to next slide"
         className={s.btn}
         onClick={goToNextSlide}
       >

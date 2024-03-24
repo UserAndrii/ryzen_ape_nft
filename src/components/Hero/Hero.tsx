@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           />
           <img
             src={`${heroMob}`}
-            alt="Ape"
+            alt="Yacht Ape is a collection of unique digital apes"
             width={216}
             height={284}
             className={s.hero__image}
@@ -51,6 +51,7 @@ const Hero: React.FC = () => {
           smooth={true}
           offset={0}
           duration={500}
+          aria-label="Link to the mint section"
         >
           MEET APES
         </Link>

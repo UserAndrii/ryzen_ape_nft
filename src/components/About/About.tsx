@@ -55,10 +55,11 @@ const About: React.FC<IAboutProp> = ({ innerRef }) => {
           />
           <img
             src={`${aboutMob}`}
-            alt="Ape"
+            alt="A story one simple Ape"
             width={216}
             height={292}
             className={s.about_image}
+            loading="lazy"
           />
         </picture>
       </div>

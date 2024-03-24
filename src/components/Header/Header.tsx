@@ -11,9 +11,7 @@ import Hero from '../Hero';
 import Logo from '../../images/icons/Logo';
 import BurgerMenu from '../BurgerMenu';
 
-interface IHeaderProp {
-  isScrolled: boolean;
-}
+import { IHeaderProp } from '../../types';
 
 const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
   const menu = ['mint', 'arts', 'faq', 'm-map', 'about'];
@@ -30,10 +28,14 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
   };
 
   return (
-    <header className={s.container}>
+    <header className={s.header__container}>
       <div className={s.header}>
         <div className={s.header__menu}>
-          <a href="./" className={s.header__logo}>
+          <a
+            href="./"
+            className={s.header__logo}
+            aria-label="Logo, link to the main page"
+          >
             <Logo className={s.header__icon} />
           </a>
 
@@ -49,7 +51,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
               <li>
                 <button
                   type="button"
-                  aria-label="open the menu"
+                  aria-label="Open or Close the mobile menu"
                   className={cn(s.header__menu_btn, {
                     [s.header__scrolled]: isScrolled,
                   })}
@@ -72,6 +74,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
                     offset={0}
                     duration={500}
                     onClick={() => setIsOpenMenu(prev => !prev)}
+                    aria-label={`Link to the ${id} section`}
                   >
                     <span>{id}</span>
                   </Link>
@@ -95,6 +98,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
                 })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Link to Discord social network"
               >
                 <Discord className={s.header__media_icon} />
               </a>
@@ -107,6 +111,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
                 })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Link to SoftRyzen webapp"
               >
                 <Logomark className={s.header__media_icon} />
               </a>
@@ -119,6 +124,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
                 })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Link to Twitter social network"
               >
                 <Twitter className={s.header__media_icon} />
               </a>

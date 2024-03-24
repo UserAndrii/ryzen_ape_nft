@@ -1,8 +1,10 @@
 import React from 'react';
+import cn from 'classnames';
+
 import s from './MindMapItem.module.scss';
 import Arrow from '../../images/icons/Arrow';
+
 import { IMapProps } from '../../types';
-import cn from 'classnames';
 
 const MindMapItem: React.FC<IMapProps> = ({ title, text, link }) => {
   return link ? (
@@ -11,6 +13,7 @@ const MindMapItem: React.FC<IMapProps> = ({ title, text, link }) => {
       rel="noopener noreferrer nofollow"
       target="_blank"
       className={cn(s.map__content, s.map__link)}
+      aria-label="Link to LEARN MORE"
     >
       <Arrow className={s.map__icon} />
       <h3
