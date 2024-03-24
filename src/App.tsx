@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-// import Header from './components/Header';
+import Header from './components/Header';
 import About from './components/About';
 import MindMap from './components/MindMap';
 import FAQ from './components/FAQ';
@@ -10,9 +10,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
-  // const [isScrolled, setIsScrolled] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +34,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      {/* <Header isScrolled={isScrolled} /> */}
+      <Header isScrolled={isScrolled} />
       <main>
         <About innerRef={aboutRef} />
         <MindMap />
