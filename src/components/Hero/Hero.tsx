@@ -11,7 +11,7 @@ import heroDesk2x from '../../images/nft/hero/hero_desktop@2x.png';
 
 const Hero: React.FC = () => {
   return (
-    <div className={s.hero__main}>
+    <section className={s.hero__main}>
       <p className={s.hero__subtitle}>diD yOu seE iT ?</p>
       <h1 className={s.hero__title}>
         YACHT <span>APES</span>
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
         Yacht Ape is a collection of unique digital apes that you can own in NFT
         format
       </p>
-    </div>
+    </section>
   );
 };
 

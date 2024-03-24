@@ -28,9 +28,9 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
   };
 
   return (
-    <header className={s.header__container}>
+    <div className={s.container}>
       <div className={s.header}>
-        <div className={s.header__menu}>
+        <header className={s.header__menu}>
           <a
             href="./"
             className={s.header__logo}
@@ -84,7 +84,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
               ))}
             </ul>
           </nav>
-        </div>
+        </header>
 
         <div
           className={cn(s.header__main_container, {
@@ -138,7 +138,7 @@ const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
           <BurgerMenu isOpen={isOpenMenu} onClick={toggleMenu} />
         )}
       </div>
-    </header>
+    </div>
   );
 };
 
