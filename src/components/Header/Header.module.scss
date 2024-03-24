@@ -2,12 +2,14 @@
 @import '/src/styles/mixins.scss';
 
 .header__container {
-  position: relative;
-  min-width: 344px;
-  max-width: 404px;
+  @media screen and (min-width: 280px) {
+    position: relative;
+    min-width: 344px;
+    max-width: 404px;
 
-  margin: 0 auto;
-  padding: 54px 8px 0px;
+    margin: 0 auto;
+    padding: 54px 8px 0px;
+  }
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
