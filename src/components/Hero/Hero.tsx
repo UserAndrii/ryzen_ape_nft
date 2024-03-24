@@ -54,7 +54,6 @@ const Hero: React.FC = () => {
         >
           MEET APES
         </Link>
-        {/* <a href="#mint" className={s.hero__link_meet}></a> */}
       </div>
 
       <p className={s.hero__text}>

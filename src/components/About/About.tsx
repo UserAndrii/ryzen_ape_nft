@@ -11,9 +11,13 @@ import aboutTab2x from '../../images/nft/about/about_tablet@2x.png';
 import aboutDesk from '../../images/nft/about/about_desktop.png';
 import aboutDesk2x from '../../images/nft/about/about_desktop@2x.png';
 
-const About: React.FC = () => {
+interface IAboutProp {
+  innerRef: React.Ref<HTMLDivElement>;
+}
+
+const About: React.FC<IAboutProp> = ({ innerRef }) => {
   return (
-    <section className={s.about} id="about">
+    <section className={s.about} id="about" ref={innerRef}>
       <div className={s.about__container}>
         <h2 className={s.about__title}>
           A Story that started with <span>one simple</span> <span>ape</span>

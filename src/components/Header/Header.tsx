@@ -11,7 +11,11 @@ import Hero from '../Hero';
 import Logo from '../../images/icons/Logo';
 import BurgerMenu from '../BurgerMenu';
 
-const Header: React.FC = () => {
+interface IHeaderProp {
+  isScrolled: boolean;
+}
+
+const Header: React.FC<IHeaderProp> = ({ isScrolled }) => {
   const menu = ['mint', 'arts', 'faq', 'm-map', 'about'];
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
@@ -33,15 +37,22 @@ const Header: React.FC = () => {
             <Logo className={s.header__icon} />
           </a>
 
-          <nav className={s.header__nav}>
+          <nav
+            className={cn(s.header__nav, { [s.header__scrolled]: isScrolled })}
+          >
             <ul
-              className={cn(s.header__menu_wrapper, { [s.open]: isOpenMenu })}
+              className={cn(s.header__menu_wrapper, {
+                [s.open]: isOpenMenu,
+                [s.header__scrolled]: isScrolled,
+              })}
             >
               <li>
                 <button
                   type="button"
                   aria-label="open the menu"
-                  className={s.header__menu_btn}
+                  className={cn(s.header__menu_btn, {
+                    [s.header__scrolled]: isScrolled,
+                  })}
                   onClick={toggleMenu}
                 >
                   <span>{isOpenMenu ? 'CLOSE' : 'MENU'}</span>
@@ -53,6 +64,7 @@ const Header: React.FC = () => {
                   <Link
                     className={cn(s.header__menu_link, {
                       [s.open]: isOpenMenu,
+                      [s.header__scrolled]: isScrolled,
                     })}
                     to={id}
                     spy={true}
@@ -69,12 +81,18 @@ const Header: React.FC = () => {
           </nav>
         </div>
 
-        <div className={s.header__main_container}>
+        <div
+          className={cn(s.header__main_container, {
+            [s.header__scrolled]: isScrolled,
+          })}
+        >
           <ul className={s.header__media_links}>
             <li className={s.header__media_item}>
               <a
                 href="https://discord.com/"
-                className={s.header__media_link}
+                className={cn(s.header__media_link, {
+                  [s.header__scrolled]: isScrolled,
+                })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
@@ -84,7 +102,9 @@ const Header: React.FC = () => {
             <li className={s.header__media_item}>
               <a
                 href="https://www.softryzen.com/"
-                className={s.header__media_link}
+                className={cn(s.header__media_link, {
+                  [s.header__scrolled]: isScrolled,
+                })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
@@ -94,7 +114,9 @@ const Header: React.FC = () => {
             <li className={s.header__media_item}>
               <a
                 href="https://twitter.com/"
-                className={s.header__media_link}
+                className={cn(s.header__media_link, {
+                  [s.header__scrolled]: isScrolled,
+                })}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
