@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ryzen_ape_nft/static/css/main.dab023ac.css",
-    "main.js": "/ryzen_ape_nft/static/js/main.9bb440d3.js",
+    "main.js": "/ryzen_ape_nft/static/js/main.07ff4014.js",
     "static/media/about_desktop@2x.png": "/ryzen_ape_nft/static/media/about_desktop@2x.14a8308e89c6fd613bf9.png",
     "static/media/hero_desktop@2x.png": "/ryzen_ape_nft/static/media/hero_desktop@2x.8b66b82224cef936159c.png",
     "static/media/BiroScriptPlus-Bold.ttf": "/ryzen_ape_nft/static/media/BiroScriptPlus-Bold.d59732f3d22e3d024577.ttf",
@@ -60,10 +60,10 @@
     "index.html": "/ryzen_ape_nft/index.html",
     "static/media/slick.woff": "/ryzen_ape_nft/static/media/slick.295183786cd8a1389865.woff",
     "main.dab023ac.css.map": "/ryzen_ape_nft/static/css/main.dab023ac.css.map",
-    "main.9bb440d3.js.map": "/ryzen_ape_nft/static/js/main.9bb440d3.js.map"
+    "main.07ff4014.js.map": "/ryzen_ape_nft/static/js/main.07ff4014.js.map"
   },
   "entrypoints": [
     "static/css/main.dab023ac.css",
-    "static/js/main.9bb440d3.js"
+    "static/js/main.07ff4014.js"
   ]
 }
