@@ -14,14 +14,9 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const point = window.scrollY;
-
       if (aboutRef.current) {
         const aboutTop = aboutRef.current.getBoundingClientRect().top;
-
-        setTimeout(() => {
-          setIsScrolled(point === window.scrollY && aboutTop <= 0);
-        }, 200);
+        setIsScrolled(aboutTop <= 0);
       }
     };
 
