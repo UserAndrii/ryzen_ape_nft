@@ -40,7 +40,7 @@ const About: React.FC<IAboutProp> = ({ innerRef }) => {
         <picture>
           <source
             type="image/png"
-            media="(min-width: 1200px)"
+            media="(min-width: 1280px)"
             srcSet={`${aboutDesk} 1x, ${aboutDesk2x} 2x`}
           />
           <source

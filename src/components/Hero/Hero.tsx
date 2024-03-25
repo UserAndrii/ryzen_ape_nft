@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         <picture>
           <source
             type="image/png"
-            media="(min-width: 1200px)"
+            media="(min-width: 1280px)"
             srcSet={`${heroDesk} 1x, ${heroDesk2x} 2x`}
           />
           <source
